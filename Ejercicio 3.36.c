@@ -1,0 +1,112 @@
+/*Introduzca un número entero que contenga sólo unos y ceros (es decir, un entero “binario”) y que despliegue su
+equivalente decimal.*/
+#include<stdio.h>
+#include<conio.h>
+main()
+{
+	int n,d1,d2,d3,d4,d5,d6,d7,d8,d9,d10;
+	int b1,b2,b3,b4,b5,b6,b7,b8,b9,b10,t;
+	printf("Porgrama para convertir binario en decimal(hasta 10 digitos)\n");
+	printf("Escriba el numero en binario:\n");
+	scanf("%d",&n);
+	if (n>1111111111)
+	{
+		printf("Numero no valido");
+	}
+	else
+	{
+		b1=n/1000000000;
+		b2=n%1000000000/100000000;
+		b3=n%1000000000%100000000/10000000;
+		b4=n%1000000000%100000000%10000000/1000000;
+		b5=n%1000000000%100000000%10000000%1000000/100000;
+		b6=n%1000000000%100000000%10000000%1000000%100000/10000;
+		b7=n%1000000000%100000000%10000000%1000000%100000%10000/1000;
+		b8=n%1000000000%100000000%10000000%1000000%100000%10000%1000/100;
+		b9=n%1000000000%100000000%10000000%1000000%100000%10000%1000%100/10;
+		b10=n%1000000000%100000000%10000000%1000000%100000%10000%1000%100%10/1;
+		if(b1==1)
+		{
+			d1=b1*512;
+		}
+		else
+		{
+			d1=b1*0;
+		}
+		if(b2==1)
+		{
+			d2=b2*256;
+		}
+		else
+		{
+			d2=b2*0;
+		}
+		if(b3==1)
+		{
+			d3=b3*128;
+		}
+		else
+		{
+			d3=b3*0;
+		}
+		if(b4==1)
+		{
+			d4=b4*64;
+		}
+		else
+		{
+			d4=b4*0;
+		}
+		if(b5==1)
+		{
+			d5=b5*32;
+		}
+		else
+		{
+			d5=b5*0;
+		}
+		if(b6==1)
+		{
+			d6=b6*16;
+		}
+		else
+		{
+			d6=b6*0;
+		}
+		if(b7==1)
+		{
+			d7=b7*8;
+		}
+		else
+		{
+			d7=b7*0;
+		}
+		if(b8==1)
+		{
+			d8=b8*4;
+		}
+		else
+		{
+			d8=b8*0;
+		}
+		if(b9==1)
+		{
+			d9=b9*2;
+		}
+		else
+		{
+			d9=b9*0;
+		}
+		if(b10==1)
+		{
+			d10=b10*1;
+		}
+		else
+		{
+			d10=b10*0;
+		}
+		t=d1+d2+d3+d4+d5+d6+d7+d8+d9+d10;
+		printf("\nEl numero en decimal es %d",t);
+	}
+	getch();
+}
